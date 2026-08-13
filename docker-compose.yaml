@@ -1,0 +1,27 @@
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  supabase_mcp:
+    build: ./app
+    image: somos-supabase-mcp:latest
+    container_name: supabase_mcp
+    env_file:
+      - .env
+    # Sem `ports`: só o agente (na mesma rede) o alcança, pelo nome do serviço.
+    expose:
+      - "8000"
+    restart: unless-stopped
+    logging: *default-logging
+    networks:
+      - somos
+
+networks:
+  # Rede criada pelo compose do payment_process (mesmo droplet).
+  # `external: true` = só ENTRA nela (não recria). Suba o payment_process primeiro.
+  somos:
+    name: somos_net
+    external: true
