@@ -1,5 +1,5 @@
 from .supabase import SupabaseGateway
-from app.settings import get_app_settings
+from settings import get_app_settings
 
 from contextlib import asynccontextmanager
 

@@ -4,7 +4,7 @@ from postgrest import APIError
 from supabase import create_async_client, AsyncClient
 from supabase.lib.client_options import AsyncClientOptions
 
-from app.settings import AppSettings
+from settings import AppSettings
 
 _PROCESS_FIELDS = (
     "id_prc,uuid_prc,empresa_nome,obra_nome,fornecedor_nome,tipo_nome,"

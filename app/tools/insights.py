@@ -2,8 +2,8 @@ from fastmcp.tools import Tool
 from mcp.types import ToolAnnotations
 from fastmcp.dependencies import Depends
 
-from app.gateways import get_supabase_gateway, SupabaseGateway
-from app.tools.dependencies import get_user_jwt
+from gateways import get_supabase_gateway, SupabaseGateway
+from tools.dependencies import get_user_jwt
 
 _READ_ONLY = ToolAnnotations(
     readOnlyHint=True,

@@ -1,7 +1,7 @@
 from fastmcp import FastMCP
-from app.gateways import lifespan
-from app.tools import all_tools
-from app.constants.instructions import INSTRUCTIONS
+from gateways import lifespan
+from tools import all_tools
+from constants.instructions import INSTRUCTIONS
 
 app = FastMCP(
     name="Supabase Gateway",
