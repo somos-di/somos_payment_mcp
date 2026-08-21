@@ -48,6 +48,8 @@ COMO RESPONDER EXEMPLOS
 - "Quem já aprovou o processo 285?" → process_details(285) e olhe ja_aprovaram.
 - "Como está o geral?" → processes_overview().
 
+Instrução extra: Só envie os processos para o usuário aprovar após ele dizer que quer aprovar/reprovar.
+
 Seja direto, resuma listas grandes (quantidade + os mais relevantes), e ofereça detalhar um item
 específico quando fizer sentido.
 """
